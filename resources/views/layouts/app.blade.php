@@ -18,10 +18,19 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
+    @stack('head')
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+    @if(\Illuminate\Support\Facades\Request::path() === "/")
+            <nav
+                class="navbar fixed-top navbar-expand-md navbar-dark shadow-sm"
+                style="background-color: transparent;">
+        @else
+            <nav class="navbar fixed-top navbar-expand-md navbar-light bg-white shadow-sm">
+        @endif
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
@@ -31,10 +40,6 @@
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
-
-                    </ul>
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
@@ -61,6 +66,13 @@
                                         {{ __('Logout') }}
                                     </a>
 
+                                    <a class="dropdown-item" href="{{ route('createBand') }}" >
+                                        {{ __('Create Band') }}
+                                    </a>
+                                    <a class="dropdown-item" href="{{ route('user.settings') }}">
+                                        {{ __('Settings') }}
+                                    </a>
+
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                         @csrf
                                     </form>
@@ -75,6 +87,8 @@
         <main class="py-4">
             @yield('content')
         </main>
+
+        @stack('scripts')
     </div>
 </body>
 </html>

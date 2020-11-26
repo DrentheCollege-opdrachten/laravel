@@ -15,7 +15,7 @@ class CreateBandsTable extends Migration
     {
         Schema::create('bands', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->string('name')->default("");
             $table->timestamps();
         });
     }

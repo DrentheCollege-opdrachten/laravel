@@ -10,6 +10,7 @@
         "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
     },
     "devDependencies": {
+        "@babel/plugin-syntax-class-properties": "^7.12.1",
         "@babel/preset-react": "^7.0.0",
         "axios": "^0.19",
         "bootstrap": "^4.0.0",
@@ -27,6 +28,8 @@
         "watch": "^1.0.2"
     },
     "dependencies": {
-        "react-autocomplete": "^1.8.1"
+        "react-autocomplete": "^1.8.1",
+        "react-autosuggest": "^10.0.3",
+        "sass-to-css-variables": "^1.0.1"
     }
 }

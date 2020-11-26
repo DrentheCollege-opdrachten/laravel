@@ -9,7 +9,12 @@ class Post extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+      'band_id',
+      'video_url'
+    ];
+
     public function getBand() {
-        return $this->belongsTo('App\Models\Band');
+        return $this->belongsTo('App\Models\Band')->get();
     }
 }

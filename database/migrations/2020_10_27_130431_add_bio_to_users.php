@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddBiografieToBands extends Migration
+class AddBioToUsers extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,8 @@ class AddBiografieToBands extends Migration
      */
     public function up()
     {
-        Schema::table('bands', function (Blueprint $table) {
-            $table->string('bio')->default("");
+        Schema::table('users', function (Blueprint $table) {
+            $table->text('bio')->default("");
         });
     }
 
@@ -25,7 +25,7 @@ class AddBiografieToBands extends Migration
      */
     public function down()
     {
-        Schema::table('bands', function (Blueprint $table) {
+        Schema::table('users', function (Blueprint $table) {
             $table->dropColumn('bio');
         });
     }

@@ -1,0 +1,311 @@
+
+.sixteenByNine {
+    position: relative;
+
+    overflow: hidden;
+    @include custom-colors();
+
+    @media screen and (max-width: 767px) {
+        padding-bottom: 56.25%;
+    }
+
+    .aspect-ratio-body {
+        @include margin-absolute(20px);
+    }
+
+    .card-body {
+        background-color: var(--body-bg);
+        padding: 0px;
+        overflow: hidden;
+    }
+}
+
+.underline {
+    margin-top: 50px;
+    border-bottom: 1px solid var(--text-color, #{$body-color});
+}
+
+body {
+    @include custom-colors();
+
+    .card {
+        border-width: 0px;
+        overflow: hidden;
+    }
+    #userPage {
+
+        @include custom-colors();
+
+        .row.posts {
+            .post {
+                iframe {
+                    margin:10px;
+                }
+
+                position: relative;
+
+                form {
+                     label {
+                         position: absolute;
+                         z-index: 10;
+                         left: 20px;
+                         bottom: 0px;
+
+                         height: 60px;
+                         width: 60px;
+
+                         color: white;
+                         font-size: 2em;
+
+                         backdrop-filter: blur(3px);
+                         background-color: rgba(0,0,0,0.4);
+
+                         display: flex;
+                         align-items: center;
+                         justify-content: center;
+
+                         border-radius: 50%;
+                     }
+
+                    input {
+                        display:none;
+                    }
+
+                }
+            }
+        }
+        .row.bands {
+
+            margin-bottom: 40px;
+
+            .band {
+                margin: 10px;
+                padding: 0px;
+
+                @include custom-colors(#000, white);
+
+                .square-image {
+                    @include aspect-ratio(1,1);
+                }
+
+                //border: 3px solid white;
+                //border-radius: 10px;
+
+                .card-img-overlay {
+                    background-color: rgba(0,0,0,0.3);
+                    backdrop-filter: blur(1px);
+
+                    transition: opacity 0.3s;
+
+                    .card-title {
+                        font-size: 2em;
+                    }
+
+                    > * {
+                      transition-duration: 0.3s;
+                        color: white;
+                    }
+
+                    &::before {
+                        opacity: 0;
+                        position: absolute;
+                        content: "Check out";
+                        text-transform: uppercase;
+                        display: block;
+                        bottom: 10px;
+                        width: 75%;
+                        left: 12.5%;
+                        text-align: center;
+                        padding: 10px;
+
+                        backdrop-filter: grayscale(100%) contrast(200%);
+
+                        color: white;
+                        border: 1px solid white;
+                        border-radius: 10px;
+                        transition-duration: 0.3s;
+
+                    }
+                }
+
+                .card-img-overlay:hover {
+
+                    backdrop-filter: none;
+                    background-color: rgba(0,0,0,0);
+
+                    .card-text {
+                        opacity: 0;
+                    }
+
+                    &::before {
+                        opacity: 1;
+
+                        &:hover {
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#user-settings {
+    form {
+        .card {
+            @include custom-colors();
+
+            border: 1px solid $text-color;
+            .card-header {
+                background-color: rgba(0,0,0,0.05);
+            }
+        }
+
+        input, textarea, label {
+            @include custom-colors();
+
+            border-color: var(--text-color);
+        }
+
+        label::after {
+            background-color: rgba(0,0,0,0.05);
+            color: $text-color;
+
+        }
+
+        button {
+            background-color: var(--text-color, #{$primary});
+            color: var(--background-color, black);
+        }
+
+        .text-muted {
+            color: $text-color !important;
+            opacity: 0.8;
+        }
+
+        input[type="color"] {
+            border: none;
+            padding: 0px;
+            width: 200%;
+            height: 30px
+        }
+
+        #bandSettingsAutoComplete {
+            input {
+                border-color: var(--text-color, black);
+
+                display: block;
+                width: 100%;
+                height: calc(1.6em + 0.75rem + 2px);
+                padding: 0.375rem 0.75rem;
+                font-size: 0.9rem;
+                font-weight: 400;
+                line-height: 1.6;
+                background-clip: padding-box;
+                border: 1px solid;
+                border-radius: 0.25rem;
+                transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+            }
+        }
+    }
+}
+main.py-4{
+    padding-bottom: 0px !important;
+    padding-top: 0px !important;
+
+    > .container {
+        margin-top: calc(55px + 1.5rem);
+    }
+}
+.navbar-dark {
+    #navbarSupportedContent > ul > li > a {
+        color: white
+    }
+
+}
+    #home {
+    background-color: black;
+    background-image: url('../images/band.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+
+    .blurbackground {
+        height: 100vh;
+
+
+        .container {
+            border-radius: 40px;
+            padding: 40px;
+
+            h1 {
+                max-width: 25ch;
+                margin: auto;
+            }
+
+            form {
+                position: relative;
+
+                button {
+                    position: absolute;
+                    right: 0px;
+                    bottom: 0px;
+                    font-size: 2em;
+                    color: white;
+                    stroke-width: 4px;
+                }
+
+                .guestSearch {
+                    background-color: unset;
+                    border: none;
+                    border-bottom: 1px solid #ced4da;
+                    border-radius: 0px;
+
+                    outline-color: transparent;
+                    outline-style: none;
+
+                    color: white;
+
+                    font-size: 2em;
+                    padding: 0px 2.2em 0px 0px;
+                    text-indent: 2.2em;
+
+                    text-align: center;
+
+                    &:focus {
+                        outline: none;
+                        background-color: unset !important;
+                    }
+
+                &:active {
+                    outline: none;
+                }
+
+                &:placeholder-shown {
+                    color: transparent;
+
+                    & + .cursor {
+                        position: absolute;
+                        width: 2px;
+                        background: #ced4da;
+                        bottom: 5px;
+                        top: 5px;
+                        left: 50%;
+
+                        transition: opacity 0.3s;
+
+                        animation: 1s blink step-end infinite;
+                    }
+                }
+
+                &:not(:placeholder-shown) + button {
+                    color: red;
+                }
+            }
+        }
+
+        }
+
+    }
+}

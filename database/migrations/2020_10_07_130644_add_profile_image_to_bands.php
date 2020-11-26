@@ -14,7 +14,7 @@ class AddProfileImageToBands extends Migration
     public function up()
     {
         Schema::table('bands', function (Blueprint $table) {
-            $table->string('profile_image');
+            $table->string('profile_image')->default("");
         });
     }
 

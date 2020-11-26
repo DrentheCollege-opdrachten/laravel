@@ -21,6 +21,8 @@ class User extends Authenticatable
         'email',
         'password',
         'profile_image',
+        'bio',
+        'theme',
     ];
 
     /**
@@ -40,6 +42,7 @@ class User extends Authenticatable
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
+        'theme' => 'array'
     ];
 
     public function getBands()
@@ -49,5 +52,9 @@ class User extends Authenticatable
 
     public function getProfilePicture() {
         return $this->profile_image;
+    }
+
+    public function inBand($bandId) {
+        return $this->getBands()->where('band_id', $bandId);
     }
 }

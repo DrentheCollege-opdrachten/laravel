@@ -2,6 +2,9 @@
 
 namespace App\Providers;
 
+use App\Http\Middleware\InBand;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -24,5 +27,9 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         //
+        Blade::if('partOfBand', function () {
+            if (!auth()::check()) return false;
+
+        });
     }
 }

@@ -18,6 +18,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/search/user/{field?}', [\App\Http\Controllers\UserController::class, 'searchForUser']);
+Route::get('/search/user/email/{email?}', [\App\Http\Controllers\SearchController::class, 'searchForUserByMail']);
 
-Route::get('/band/addUser/{band_id}/{user_id}', [\App\Http\Controllers\BandController::class, 'addBandUser'])->middleware('auth', 'inBand');
+Route::get('/band/{bandId}/getUsers', [\App\Http\Controllers\BandController::class, 'getMembers']);
+
+Route::get('/search/{name}', [\App\Http\Controllers\SearchController::class, 'searchBandAndUserByName']);

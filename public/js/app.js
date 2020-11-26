@@ -67881,9 +67881,11 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
  */
 
 
-__webpack_require__(/*! ./components/Example */ "./resources/js/components/Example.js");
+__webpack_require__(/*! ./components/bandSettingsUserSearchAutoComplete */ "./resources/js/components/bandSettingsUserSearchAutoComplete.js");
 
-__webpack_require__(/*! ./components/AutoCompleteInput */ "./resources/js/components/AutoCompleteInput.js");
+__webpack_require__(/*! ./components/searchUserAndBands */ "./resources/js/components/searchUserAndBands.js");
+
+__webpack_require__(/*! ./components/ProfilePicture */ "./resources/js/components/ProfilePicture.js");
 
 /***/ }),
 
@@ -67932,16 +67934,16 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 /***/ }),
 
-/***/ "./resources/js/components/AutoCompleteInput.js":
-/*!******************************************************!*\
-  !*** ./resources/js/components/AutoCompleteInput.js ***!
-  \******************************************************/
+/***/ "./resources/js/components/ProfilePicture.js":
+/*!***************************************************!*\
+  !*** ./resources/js/components/ProfilePicture.js ***!
+  \***************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return AutoCompleteInput; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return ProfileImageSettings; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
@@ -68070,17 +68072,240 @@ function _getPrototypeOf(o) {
 
 
 
-var AutoCompleteInput = /*#__PURE__*/function (_React$Component) {
-  _inherits(AutoCompleteInput, _React$Component);
+var ProfileImageSettings = /*#__PURE__*/function (_React$Component) {
+  _inherits(ProfileImageSettings, _React$Component);
 
-  var _super = _createSuper(AutoCompleteInput);
+  var _super = _createSuper(ProfileImageSettings);
 
-  function AutoCompleteInput(props, context) {
+  function ProfileImageSettings(props, context) {
+    var _this;
+
+    _classCallCheck(this, ProfileImageSettings);
+
+    _this = _super.call(this, props, context);
+    console.log(props);
+    return _this;
+  }
+
+  _createClass(ProfileImageSettings, [{
+    key: "render",
+    value: function render() {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, " Lol ");
+    }
+  }]);
+
+  return ProfileImageSettings;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+
+
+
+if (document.getElementById('react-ProfileImageSettings')) {
+  var propsContainer = document.getElementById('react-ProfileImageSettings');
+  var props = Object.assign({}, propsContainer.dataset);
+  react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ProfileImageSettings, props), document.getElementById('react-ProfileImageSettings'));
+}
+
+/***/ }),
+
+/***/ "./resources/js/components/bandSettingsUserSearchAutoComplete.js":
+/*!***********************************************************************!*\
+  !*** ./resources/js/components/bandSettingsUserSearchAutoComplete.js ***!
+  \***********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return BandSettingsUserSearchAutoComplete; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_autocomplete__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-autocomplete */ "./node_modules/react-autocomplete/build/lib/Autocomplete.js");
+/* harmony import */ var react_autocomplete__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_autocomplete__WEBPACK_IMPORTED_MODULE_2__);
+function _typeof(obj) {
+  "@babel/helpers - typeof";
+
+  if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
+    _typeof = function _typeof(obj) {
+      return typeof obj;
+    };
+  } else {
+    _typeof = function _typeof(obj) {
+      return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
+    };
+  }
+
+  return _typeof(obj);
+}
+
+function ownKeys(object, enumerableOnly) {
+  var keys = Object.keys(object);
+
+  if (Object.getOwnPropertySymbols) {
+    var symbols = Object.getOwnPropertySymbols(object);
+    if (enumerableOnly) symbols = symbols.filter(function (sym) {
+      return Object.getOwnPropertyDescriptor(object, sym).enumerable;
+    });
+    keys.push.apply(keys, symbols);
+  }
+
+  return keys;
+}
+
+function _objectSpread(target) {
+  for (var i = 1; i < arguments.length; i++) {
+    var source = arguments[i] != null ? arguments[i] : {};
+
+    if (i % 2) {
+      ownKeys(Object(source), true).forEach(function (key) {
+        _defineProperty(target, key, source[key]);
+      });
+    } else if (Object.getOwnPropertyDescriptors) {
+      Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
+    } else {
+      ownKeys(Object(source)).forEach(function (key) {
+        Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
+      });
+    }
+  }
+
+  return target;
+}
+
+function _defineProperty(obj, key, value) {
+  if (key in obj) {
+    Object.defineProperty(obj, key, {
+      value: value,
+      enumerable: true,
+      configurable: true,
+      writable: true
+    });
+  } else {
+    obj[key] = value;
+  }
+
+  return obj;
+}
+
+function _classCallCheck(instance, Constructor) {
+  if (!(instance instanceof Constructor)) {
+    throw new TypeError("Cannot call a class as a function");
+  }
+}
+
+function _defineProperties(target, props) {
+  for (var i = 0; i < props.length; i++) {
+    var descriptor = props[i];
+    descriptor.enumerable = descriptor.enumerable || false;
+    descriptor.configurable = true;
+    if ("value" in descriptor) descriptor.writable = true;
+    Object.defineProperty(target, descriptor.key, descriptor);
+  }
+}
+
+function _createClass(Constructor, protoProps, staticProps) {
+  if (protoProps) _defineProperties(Constructor.prototype, protoProps);
+  if (staticProps) _defineProperties(Constructor, staticProps);
+  return Constructor;
+}
+
+function _inherits(subClass, superClass) {
+  if (typeof superClass !== "function" && superClass !== null) {
+    throw new TypeError("Super expression must either be null or a function");
+  }
+
+  subClass.prototype = Object.create(superClass && superClass.prototype, {
+    constructor: {
+      value: subClass,
+      writable: true,
+      configurable: true
+    }
+  });
+  if (superClass) _setPrototypeOf(subClass, superClass);
+}
+
+function _setPrototypeOf(o, p) {
+  _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) {
+    o.__proto__ = p;
+    return o;
+  };
+
+  return _setPrototypeOf(o, p);
+}
+
+function _createSuper(Derived) {
+  var hasNativeReflectConstruct = _isNativeReflectConstruct();
+
+  return function _createSuperInternal() {
+    var Super = _getPrototypeOf(Derived),
+        result;
+
+    if (hasNativeReflectConstruct) {
+      var NewTarget = _getPrototypeOf(this).constructor;
+
+      result = Reflect.construct(Super, arguments, NewTarget);
+    } else {
+      result = Super.apply(this, arguments);
+    }
+
+    return _possibleConstructorReturn(this, result);
+  };
+}
+
+function _possibleConstructorReturn(self, call) {
+  if (call && (_typeof(call) === "object" || typeof call === "function")) {
+    return call;
+  }
+
+  return _assertThisInitialized(self);
+}
+
+function _assertThisInitialized(self) {
+  if (self === void 0) {
+    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+  }
+
+  return self;
+}
+
+function _isNativeReflectConstruct() {
+  if (typeof Reflect === "undefined" || !Reflect.construct) return false;
+  if (Reflect.construct.sham) return false;
+  if (typeof Proxy === "function") return true;
+
+  try {
+    Date.prototype.toString.call(Reflect.construct(Date, [], function () {}));
+    return true;
+  } catch (e) {
+    return false;
+  }
+}
+
+function _getPrototypeOf(o) {
+  _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
+    return o.__proto__ || Object.getPrototypeOf(o);
+  };
+  return _getPrototypeOf(o);
+}
+
+
+ // Import the Autocomplete Component
+
+
+
+var BandSettingsUserSearchAutoComplete = /*#__PURE__*/function (_React$Component) {
+  _inherits(BandSettingsUserSearchAutoComplete, _React$Component);
+
+  var _super = _createSuper(BandSettingsUserSearchAutoComplete);
+
+  function BandSettingsUserSearchAutoComplete(props, context) {
     var _this2;
 
-    _classCallCheck(this, AutoCompleteInput);
+    _classCallCheck(this, BandSettingsUserSearchAutoComplete);
 
-    _this2 = _super.call(this, props, context); // Set initial State
+    _this2 = _super.call(this, props, context);
+    console.log(_this2.props); // Set initial State
 
     _this2.state = {
       // Current value of the select field
@@ -68088,8 +68313,12 @@ var AutoCompleteInput = /*#__PURE__*/function (_React$Component) {
       // Data that will be rendered in the autocomplete
       // As it is asynchronous, it is initially empty
       autocompleteData: [],
-      selectedVal: ''
-    }; // Bind `this` context to functions of the class
+      selectedVal: '',
+      members: []
+    };
+
+    _this2.getBandMembers(); // Bind `this` context to functions of the class
+
 
     _this2.onChange = _this2.onChange.bind(_assertThisInitialized(_this2));
     _this2.onSelect = _this2.onSelect.bind(_assertThisInitialized(_this2));
@@ -68098,44 +68327,49 @@ var AutoCompleteInput = /*#__PURE__*/function (_React$Component) {
     _this2.retrieveDataAsynchronously = _this2.retrieveDataAsynchronously.bind(_assertThisInitialized(_this2));
     return _this2;
   }
-  /**
-   * Updates the state of the autocomplete data with the remote data obtained via AJAX.
-   *
-   * @param {String} searchText content of the input that will filter the autocomplete data.
-   * @return {Nothing} The state is updated but no value is returned
-   */
 
+  _createClass(BandSettingsUserSearchAutoComplete, [{
+    key: "getBandMembers",
+    value: function getBandMembers() {
+      var bandId = window.location.pathname.split('/')[2];
 
-  _createClass(AutoCompleteInput, [{
+      var _this = this;
+
+      fetch("/api/band/".concat(bandId, "/getUsers")).then(function (response) {
+        if (response.status !== 200) {
+          console.log('There has been a error');
+        }
+
+        return response.json();
+      }).then(function (data) {
+        _this.setState({
+          members: data
+        });
+      });
+    }
+    /**
+     * Updates the state of the autocomplete data with the remote data obtained via AJAX.
+     *
+     * @param {String} searchText content of the input that will filter the autocomplete data.
+     * @return {Nothing} The state is updated but no value is returned
+     */
+
+  }, {
     key: "retrieveDataAsynchronously",
     value: function retrieveDataAsynchronously(searchText) {
-      var _this = this; // Url of your website that process the data and returns a
+      var _this = this;
 
-
-      var url = "/api/search/user/".concat(searchText); // Configure a basic AJAX request to your server side API
-      // that returns the data according to the sent text
-
-      var xhr = new XMLHttpRequest();
-      xhr.open('GET', url, true);
-      xhr.responseType = 'json';
-
-      xhr.onload = function () {
-        var status = xhr.status;
-
-        if (status == 200) {
-          // Update the state with the remote data and that's it !
-          _this.setState({
-            autocompleteData: xhr.response
-          }); // Show response of your server in the console
-
-
-          console.log(xhr.response);
-        } else {
-          console.error("Cannot load data from remote source");
+      fetch("/api/search/user/email/".concat(searchText)).then(function (response) {
+        if (response.status !== 200) {
+          alert("there has been an error adding the user");
         }
-      };
 
-      xhr.send();
+        return response.json();
+      }).then(function (data) {
+        _this.setState({
+          autocompleteData: data
+        });
+      });
     }
     /**
      * Callback triggered when the user types in the autocomplete field
@@ -68179,7 +68413,7 @@ var AutoCompleteInput = /*#__PURE__*/function (_React$Component) {
      *
      * @param {Object} item Single object from the data that can be shown inside the autocomplete
      * @param {Boolean} isHighlighted declares wheter the item has been highlighted or not.
-     * @return {Markup} Component
+     * @return {JSX.Element} Component
      */
 
   }, {
@@ -68187,11 +68421,11 @@ var AutoCompleteInput = /*#__PURE__*/function (_React$Component) {
     value: function renderItem(item, isHighlighted) {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "item",
-        key: item.value,
+        key: item.id,
         style: {
           background: isHighlighted ? 'lightgray' : 'white'
         }
-      }, item.label);
+      }, item.email);
     }
     /**
      * Define which property of the autocomplete source will be show to the user.
@@ -68206,73 +68440,533 @@ var AutoCompleteInput = /*#__PURE__*/function (_React$Component) {
       // You can obviously only return the Label or the component you need to show
       // In this case we are going to show the value and the label that shows in the input
       // something like "1 - Microsoft"
-      return "".concat(item.value, " - ").concat(item.label);
+      return "".concat(item.id, " - ").concat(item.email);
+    }
+  }, {
+    key: "addUser",
+    value: function addUser(e) {
+      var _this3 = this;
+
+      e.preventDefault();
+      var bandId = window.location.pathname.split('/')[2];
+      var user_id = this.state.selectedVal;
+
+      if (user_id === "") {
+        return alert("please select a user");
+      }
+
+      console.log(bandId, user_id);
+      var csrfToken = document.querySelector("[name='csrf-token']").getAttribute('content');
+      fetch("/band/".concat(bandId, "/addUser/").concat(user_id), {
+        method: 'post',
+        headers: {
+          'x-csrf-token': csrfToken
+        }
+      }).then(function (response) {
+        if (response.status !== 200) {
+          return alert('there was an error adding the new member');
+        }
+
+        _this3.getBandMembers();
+      });
+    }
+  }, {
+    key: "deleteMember",
+    value: function deleteMember(e) {
+      var _this4 = this;
+
+      e.preventDefault();
+      var bandId = window.location.pathname.split('/')[2];
+      var userId = e.target.dataset.id;
+      var csrfToken = document.querySelector("[name='csrf-token']").getAttribute('content');
+      fetch("/band/".concat(bandId, "/deleteUser/").concat(userId), {
+        method: 'delete',
+        headers: {
+          'x-csrf-token': csrfToken
+        }
+      }).then(function (response) {
+        if (response.status !== 200) {
+          return alert('there has been an error with deleting the member');
+        }
+
+        _this4.getBandMembers();
+      });
+    }
+  }, {
+    key: "renderMenu",
+    value: function renderMenu(items, value, style) {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        style: _objectSpread(_objectSpread({}, style), this.menuStyle),
+        children: items
+      });
     }
   }, {
     key: "render",
     value: function render() {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_autocomplete__WEBPACK_IMPORTED_MODULE_2___default.a, {
+      var _this5 = this;
+
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        style: {
+          marginBottom: "30px"
+        }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_autocomplete__WEBPACK_IMPORTED_MODULE_2___default.a, {
+        getItemValue: this.getItemValue,
+        items: this.state.autocompleteData,
+        renderItem: this.renderItem,
+        value: this.state.value,
+        onChange: this.onChange,
+        onSelect: this.onSelect,
+        renderMenu: this.renderMenu.bind(this)
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        className: "btn float-right mr-3",
+        onClick: this.addUser.bind(this),
+        type: "button"
+      }, "Add User")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+        className: "list-group list-group col-md-12"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+        className: "list-group-item active d-flex align-items-center",
+        style: {
+          backgroundColor: "var(--text-color, #3490dc)",
+          borderColor: "var(--text-color, #3490dc)",
+          color: "var(--background-color, white)"
+        }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "h5",
+        style: {
+          marginBottom: "0px"
+        }
+      }, "Current members")), this.state.members.map(function (val, index) {
+        console.log(_this5.props, val.id);
+
+        if (val.id == _this5.props.userid) {
+          return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+            key: index,
+            className: "list-group-item d-flex align-items-center",
+            style: {
+              backgroundColor: "var(--background-color, #3490dc)",
+              borderColor: "var(--text-color, #3490dc)",
+              color: "var(--text-color, white)"
+            }
+          }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+            className: "h5",
+            style: {
+              marginBottom: "0px"
+            }
+          }, val.name));
+        }
+
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+          key: index,
+          className: "list-group-item",
+          style: {
+            backgroundColor: "var(--background-color, #3490dc)",
+            borderColor: "var(--text-color, #3490dc)",
+            color: "var(--text-color, white)"
+          }
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+          "data-id": val.id,
+          className: "d-flex justify-content-between align-items-center",
+          onSubmit: _this5.deleteMember.bind(_this5)
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "h5",
+          style: {
+            marginBottom: "0px"
+          }
+        }, val.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+          type: "submit",
+          className: "btn float-right mr-2"
+        }, " delete ")));
+      }))));
+    }
+  }]);
+
+  return BandSettingsUserSearchAutoComplete;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+
+
+
+if (document.getElementById('bandSettingsAutoComplete')) {
+  var propsContainer = document.getElementById('bandSettingsAutoComplete');
+  var props = Object.assign({}, propsContainer.dataset);
+  react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(BandSettingsUserSearchAutoComplete, props), document.getElementById('bandSettingsAutoComplete'));
+}
+
+/***/ }),
+
+/***/ "./resources/js/components/searchUserAndBands.js":
+/*!*******************************************************!*\
+  !*** ./resources/js/components/searchUserAndBands.js ***!
+  \*******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return SearchUserAndBandsAutoComplete; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_autocomplete__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-autocomplete */ "./node_modules/react-autocomplete/build/lib/Autocomplete.js");
+/* harmony import */ var react_autocomplete__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_autocomplete__WEBPACK_IMPORTED_MODULE_2__);
+function _typeof(obj) {
+  "@babel/helpers - typeof";
+
+  if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
+    _typeof = function _typeof(obj) {
+      return typeof obj;
+    };
+  } else {
+    _typeof = function _typeof(obj) {
+      return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
+    };
+  }
+
+  return _typeof(obj);
+}
+
+function _createForOfIteratorHelper(o, allowArrayLike) {
+  var it;
+
+  if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) {
+    if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") {
+      if (it) o = it;
+      var i = 0;
+
+      var F = function F() {};
+
+      return {
+        s: F,
+        n: function n() {
+          if (i >= o.length) return {
+            done: true
+          };
+          return {
+            done: false,
+            value: o[i++]
+          };
+        },
+        e: function e(_e) {
+          throw _e;
+        },
+        f: F
+      };
+    }
+
+    throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+  }
+
+  var normalCompletion = true,
+      didErr = false,
+      err;
+  return {
+    s: function s() {
+      it = o[Symbol.iterator]();
+    },
+    n: function n() {
+      var step = it.next();
+      normalCompletion = step.done;
+      return step;
+    },
+    e: function e(_e2) {
+      didErr = true;
+      err = _e2;
+    },
+    f: function f() {
+      try {
+        if (!normalCompletion && it["return"] != null) it["return"]();
+      } finally {
+        if (didErr) throw err;
+      }
+    }
+  };
+}
+
+function _unsupportedIterableToArray(o, minLen) {
+  if (!o) return;
+  if (typeof o === "string") return _arrayLikeToArray(o, minLen);
+  var n = Object.prototype.toString.call(o).slice(8, -1);
+  if (n === "Object" && o.constructor) n = o.constructor.name;
+  if (n === "Map" || n === "Set") return Array.from(o);
+  if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);
+}
+
+function _arrayLikeToArray(arr, len) {
+  if (len == null || len > arr.length) len = arr.length;
+
+  for (var i = 0, arr2 = new Array(len); i < len; i++) {
+    arr2[i] = arr[i];
+  }
+
+  return arr2;
+}
+
+function _classCallCheck(instance, Constructor) {
+  if (!(instance instanceof Constructor)) {
+    throw new TypeError("Cannot call a class as a function");
+  }
+}
+
+function _defineProperties(target, props) {
+  for (var i = 0; i < props.length; i++) {
+    var descriptor = props[i];
+    descriptor.enumerable = descriptor.enumerable || false;
+    descriptor.configurable = true;
+    if ("value" in descriptor) descriptor.writable = true;
+    Object.defineProperty(target, descriptor.key, descriptor);
+  }
+}
+
+function _createClass(Constructor, protoProps, staticProps) {
+  if (protoProps) _defineProperties(Constructor.prototype, protoProps);
+  if (staticProps) _defineProperties(Constructor, staticProps);
+  return Constructor;
+}
+
+function _inherits(subClass, superClass) {
+  if (typeof superClass !== "function" && superClass !== null) {
+    throw new TypeError("Super expression must either be null or a function");
+  }
+
+  subClass.prototype = Object.create(superClass && superClass.prototype, {
+    constructor: {
+      value: subClass,
+      writable: true,
+      configurable: true
+    }
+  });
+  if (superClass) _setPrototypeOf(subClass, superClass);
+}
+
+function _setPrototypeOf(o, p) {
+  _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) {
+    o.__proto__ = p;
+    return o;
+  };
+
+  return _setPrototypeOf(o, p);
+}
+
+function _createSuper(Derived) {
+  var hasNativeReflectConstruct = _isNativeReflectConstruct();
+
+  return function _createSuperInternal() {
+    var Super = _getPrototypeOf(Derived),
+        result;
+
+    if (hasNativeReflectConstruct) {
+      var NewTarget = _getPrototypeOf(this).constructor;
+
+      result = Reflect.construct(Super, arguments, NewTarget);
+    } else {
+      result = Super.apply(this, arguments);
+    }
+
+    return _possibleConstructorReturn(this, result);
+  };
+}
+
+function _possibleConstructorReturn(self, call) {
+  if (call && (_typeof(call) === "object" || typeof call === "function")) {
+    return call;
+  }
+
+  return _assertThisInitialized(self);
+}
+
+function _assertThisInitialized(self) {
+  if (self === void 0) {
+    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+  }
+
+  return self;
+}
+
+function _isNativeReflectConstruct() {
+  if (typeof Reflect === "undefined" || !Reflect.construct) return false;
+  if (Reflect.construct.sham) return false;
+  if (typeof Proxy === "function") return true;
+
+  try {
+    Date.prototype.toString.call(Reflect.construct(Date, [], function () {}));
+    return true;
+  } catch (e) {
+    return false;
+  }
+}
+
+function _getPrototypeOf(o) {
+  _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
+    return o.__proto__ || Object.getPrototypeOf(o);
+  };
+  return _getPrototypeOf(o);
+}
+
+
+ // Import the Autocomplete Component
+
+
+
+var SearchUserAndBandsAutoComplete = /*#__PURE__*/function (_React$Component) {
+  _inherits(SearchUserAndBandsAutoComplete, _React$Component);
+
+  var _super = _createSuper(SearchUserAndBandsAutoComplete);
+
+  function SearchUserAndBandsAutoComplete(props, context) {
+    var _this2;
+
+    _classCallCheck(this, SearchUserAndBandsAutoComplete);
+
+    _this2 = _super.call(this, props, context); // Set initial State
+
+    _this2.state = {
+      value: "",
+      autocompleteData: []
+    }; // Bind `this` context to functions of the class
+
+    _this2.onChange = _this2.onChange.bind(_assertThisInitialized(_this2));
+    _this2.onSelect = _this2.onSelect.bind(_assertThisInitialized(_this2));
+    _this2.getItemValue = _this2.getItemValue.bind(_assertThisInitialized(_this2));
+    _this2.renderItem = _this2.renderItem.bind(_assertThisInitialized(_this2));
+    _this2.retrieveDataAsynchronously = _this2.retrieveDataAsynchronously.bind(_assertThisInitialized(_this2));
+    return _this2;
+  }
+  /**
+   * Updates the state of the autocomplete data with the remote data obtained via AJAX.
+   *
+   * @param {String} searchText content of the input that will filter the autocomplete data.
+   * @return {Nothing} The state is updated but no value is returned
+   */
+
+
+  _createClass(SearchUserAndBandsAutoComplete, [{
+    key: "retrieveDataAsynchronously",
+    value: function retrieveDataAsynchronously(searchText) {
+      var _this = this;
+
+      fetch("/api/search/".concat(searchText)).then(function (response) {
+        if (response.status !== 200) {
+          alert("there has been an error adding the user");
+        }
+
+        return response.json();
+      }).then(function (data) {
+        var autocompleteData = [];
+        var bands = data.bands;
+        var users = data.users;
+        console.log(data);
+
+        var _iterator = _createForOfIteratorHelper(users),
+            _step;
+
+        try {
+          for (_iterator.s(); !(_step = _iterator.n()).done;) {
+            var user = _step.value;
+            user.type = "user";
+            autocompleteData.push(user);
+          }
+        } catch (err) {
+          _iterator.e(err);
+        } finally {
+          _iterator.f();
+        }
+
+        var _iterator2 = _createForOfIteratorHelper(bands),
+            _step2;
+
+        try {
+          for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
+            var band = _step2.value;
+            band.type = "band";
+            autocompleteData.push(band);
+          }
+        } catch (err) {
+          _iterator2.e(err);
+        } finally {
+          _iterator2.f();
+        }
+
+        _this.setState({
+          autocompleteData: autocompleteData
+        });
+      });
+    }
+    /**
+     * Callback triggered when the user types in the autocomplete field
+     *
+     * @param {Event} e JavaScript Event
+     * @return {Event} Event of JavaScript can be used as usual.
+     */
+
+  }, {
+    key: "onChange",
+    value: function onChange(e) {
+      this.setState({
+        value: e.target.value
+      });
+      this.retrieveDataAsynchronously(e.target.value);
+    }
+    /**
+     * Callback triggered when the autocomplete input changes.
+     *
+     * @param {Object} val Value returned by the getItemValue function.
+     * @return {Nothing} No value is returned
+     */
+
+  }, {
+    key: "onSelect",
+    value: function onSelect(val) {}
+    /**
+     * Define the markup of every rendered item of the autocomplete.
+     *
+     * @param {Object} item Single object from the data that can be shown inside the autocomplete
+     * @param {Boolean} isHighlighted declares wheter the item has been highlighted or not.
+     * @return {JSX.Element} Component
+     */
+
+  }, {
+    key: "renderItem",
+    value: function renderItem(item, isHighlighted) {
+      var key = item.id;
+
+      if (item.type === "band") {
+        key += 1 + this.state.autocompleteData.length;
+      }
+
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "item-".concat(item.type),
+        key: key,
+        style: {
+          background: isHighlighted ? 'lightgray' : 'white'
+        }
+      }, item.name);
+    }
+  }, {
+    key: "getItemValue",
+    value: function getItemValue(item) {
+      return "".concat(item.id, " - ").concat(item.name);
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_autocomplete__WEBPACK_IMPORTED_MODULE_2___default.a, {
         getItemValue: this.getItemValue,
         items: this.state.autocompleteData,
         renderItem: this.renderItem,
         value: this.state.value,
         onChange: this.onChange,
         onSelect: this.onSelect
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        type: "hidden",
-        name: "addUser",
-        value: this.state.selectedVal
-      }));
+      });
     }
   }]);
 
-  return AutoCompleteInput;
+  return SearchUserAndBandsAutoComplete;
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
 
 
-if (document.getElementById('autoCompleteInput')) {
-  react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(AutoCompleteInput, null), document.getElementById('autoCompleteInput'));
-}
-
-/***/ }),
-
-/***/ "./resources/js/components/Example.js":
-/*!********************************************!*\
-  !*** ./resources/js/components/Example.js ***!
-  \********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
-
-
-
-function Example() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "container"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "row justify-content-center"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "col-md-8"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "card"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "card-header"
-  }, "Example Component"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "card-body"
-  }, "I'm an example component!")))));
-}
-
-/* harmony default export */ __webpack_exports__["default"] = (Example);
-
-if (document.getElementById('example')) {
-  react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Example, null), document.getElementById('example'));
+if (document.getElementById('searchBandUserAutoComplete')) {
+  react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SearchUserAndBandsAutoComplete, null), document.getElementById('searchBandUserAutoComplete'));
 }
 
 /***/ }),

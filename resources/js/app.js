@@ -12,5 +12,6 @@ require('./bootstrap');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-require('./components/Example');
-require('./components/AutoCompleteInput')
+require('./components/bandSettingsUserSearchAutoComplete');
+require('./components/searchUserAndBands');
+require('./components/ProfilePicture')

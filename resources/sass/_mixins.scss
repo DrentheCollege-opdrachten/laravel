@@ -1,0 +1,28 @@
+@mixin margin-absolute($spacing) {
+    position: absolute;
+    top: $spacing;
+    bottom: $spacing;
+    left: $spacing;
+    right: $spacing;
+}
+
+@mixin custom-colors($default-background: $body-bg, $default-text: $body-color) {
+    background-color: var(--background-color, #{$default-background});
+    color: var(--text-color, #{$default-text});
+}
+
+@mixin aspect-ratio($width, $height) {
+
+    position: relative;
+    height: 0px;
+    padding-bottom: ($height/$width) * 100% ;
+    > * {
+        @include margin-absolute(0px);
+    }
+
+    > div.image{
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+    }
+}
